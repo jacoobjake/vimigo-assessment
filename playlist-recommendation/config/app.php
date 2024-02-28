@@ -185,6 +185,4 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-    'playlist_service_url' => env('PLAYLIST_SERVICE_URL'),
-
 ];

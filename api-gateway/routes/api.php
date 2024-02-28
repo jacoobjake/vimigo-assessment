@@ -27,5 +27,8 @@ Route::middleware('auth:api')->group(function() {
     Route::prefix('billing-info')->group(function() {
         Route::get('/{user_id}', [Controllers\BillingInfoController::class, 'getUserBillingInfo']);
     });
+    Route::prefix('playlist')->group(function() {
+        Route::get('/suggest', [Controllers\PlaylistController::class, 'myPlaylistSuggestion']);
+    });
 });
 
