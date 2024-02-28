@@ -30,5 +30,10 @@ Route::middleware('auth:api')->group(function() {
     Route::prefix('playlist')->group(function() {
         Route::get('/suggest', [Controllers\PlaylistController::class, 'myPlaylistSuggestion']);
     });
+    Route::prefix('subscriptions')->group(function() {
+        Route::get('/products', [Controllers\SubscriptionController::class, 'productList']);
+        Route::get('/my-subscriptions', [Controllers\SubscriptionController::class, 'mySubscriptions']);
+        Route::post('/subscribe', [Controllers\SubscriptionController::class, 'newSubscription']);
+    });
 });
 

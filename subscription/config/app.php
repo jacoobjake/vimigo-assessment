@@ -185,8 +185,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-    'playlist_service_url' => env('PLAYLIST_SERVICE_URL'),
-    'subscription_service_url' => env('SUBSCRIPTION_SERVICE_URL'),
-
-    'api_key' => env('API_KEY'),
+    'gateway_api_key' => env('GATEWAY_API_KEY'),
+    'gateway_api_url' => env('GATEWAY_API_URL'),
 ];
